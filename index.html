@@ -126,6 +126,13 @@
   object-fit: cover;
   display: block;
 }
+    .carousel .slide{
+  display: none !important;
+}
+
+.carousel .slide.active{
+  display: block !important;
+}
     
     .card .content{
       padding: 12px 12px 14px;
@@ -266,7 +273,7 @@
 
         <!-- INVENTORY ITEM (copy/paste this card for each set) -->
         <article class="card">
-          <div class="img carousel" data-index="0">
+          <div class="img carousel">
   <img class="slide active" src="020326_NissanTitan_18.png" alt="Wheel photo 1">
   <img class="slide" src="020326_NissanTitan_18_Img2.png" alt="Wheel photo 2">
 
