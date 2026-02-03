@@ -110,29 +110,29 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 14px;
     }
-    .card{
-      display: flex;
-      flex-direction: column;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow: hidden;
-    }
-    .card .img{
-      height: 180px;
-      background: #0b0b0c;
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #7f8491;
-      font-size: 14px;
-    }
-    .card .img img{
+    /* Force the card to stack image then content */
+.card {
+  display: block;
+}
+
+/* Standard image frame */
+.card .img{
+  width: 100%;
+  height: 180px;       /* adjust this number if you want */
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  display: block;
+}
+
+/* Make the image fill the frame without stretching */
+.card .img img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  display: block;      /* THIS prevents side-by-side text wrap */
+  float: none;         /* just in case */
+}
+
 }
     .card .content{
       padding: 12px 12px 14px;
@@ -209,11 +209,13 @@
         <!-- INVENTORY ITEM (copy/paste this card for each set) -->
         <article class="card">
           <div class="img">
-            <img src="020326_NissanTitan_18.png" alt="Nissan Titan 18" Wheels":</div>
+            <img src="020326_NissanTitan_18.png" alt="Nissan Titan 18" Wheels"
+          </div>
+          
           <div class="content">
-            <p class="title">Example: 20&quot; Black Alloy Wheels</p>
+            <p class="title">Nissan Titan 18" Wheels</p>
             <p class="meta">Bolt pattern: — • Offset: — • Notes: —</p>
-            <p class="price">$1,200</p>
+            <p class="price">$700</p>
             <a class="cta" href="#contact">Message to buy</a>
           </div>
         </article>
