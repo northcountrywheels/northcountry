@@ -120,6 +120,31 @@
       overflow: hidden;
     }
 
+    .card.sold .img{
+  position: relative;
+}
+
+.card.sold .img::after{
+  content: "SOLD";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 34px;
+  letter-spacing: 3px;
+  color: white;
+  background: rgba(0,0,0,0.0);
+  opacity: 0;
+  transition: opacity .18s ease, background .18s ease;
+}
+
+.card.sold .img:hover::after{
+  opacity: 1;
+  background: rgba(0,0,0,0.55);
+}
+
     .card .img img{
   width: 100%;
   height: 100%;
@@ -272,7 +297,7 @@
       <div class="grid">
 
         <!-- INVENTORY ITEM (copy/paste this card for each set) -->
-        <article class="card">
+        <article class="card sold">
           <div class="img carousel">
   <img class="slide active" src="020326_NissanTitan_18.png" alt="Wheel photo 1">
   <img class="slide" src="020326_NissanTitan_18_Img2.png" alt="Wheel photo 2">
