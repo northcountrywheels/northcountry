@@ -58,7 +58,26 @@
   width: auto;
   display: block;
 }
-
+ .inventory {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .item {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 6px;
+    }
+    .item img {
+      width: 100%;
+      border-radius: 4px;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
 
     /* Footer */
     footer{
